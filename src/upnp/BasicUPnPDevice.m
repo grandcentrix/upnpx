@@ -52,6 +52,7 @@
 @synthesize baseURL;
 @synthesize baseURLString;
 @synthesize friendlyName;
+@synthesize manufacturer;
 @synthesize udn;
 @synthesize usn;
 @synthesize urn;
@@ -106,6 +107,7 @@
 	[baseURL release];
 	[baseURLString release];
 	[friendlyName release];
+    [manufacturer release];
 	[udn release];
 	[usn release];
 	[urn release];

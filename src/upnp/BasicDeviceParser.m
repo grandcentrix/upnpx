@@ -47,6 +47,7 @@
 @synthesize iconDepth;
 @synthesize udn;
 @synthesize friendlyName;
+@synthesize manufacturer;
 
 
 /****
@@ -113,6 +114,7 @@
         [self addAsset:[NSArray arrayWithObjects: @"root", @"device", nil] callfunction:@selector(rootDevice:) functionObject:self setStringValueFunction:nil setStringValueObject:nil];
         [self addAsset:[NSArray arrayWithObjects: @"root", @"device", @"UDN", nil] callfunction:nil functionObject:nil setStringValueFunction:@selector(setUdn:) setStringValueObject:self];
         [self addAsset:[NSArray arrayWithObjects: @"root", @"device", @"friendlyName", nil] callfunction:nil functionObject:nil setStringValueFunction:@selector(setFriendlyName:) setStringValueObject:self];
+        [self addAsset:[NSArray arrayWithObjects: @"root", @"device", @"manufacturer", nil] callfunction:nil functionObject:nil setStringValueFunction:@selector(setManufacturer:) setStringValueObject:self];
         [self addAsset:[NSArray arrayWithObjects: @"root", @"device", @"iconList", @"icon", nil] callfunction:@selector(iconFound:) functionObject:self setStringValueFunction:nil setStringValueObject:nil];
         [self addAsset:[NSArray arrayWithObjects: @"root", @"device", @"iconList", @"icon", @"mimetype", nil] callfunction:nil functionObject:nil setStringValueFunction:@selector(setIconMime:) setStringValueObject:self];
         [self addAsset:[NSArray arrayWithObjects: @"root", @"device", @"iconList", @"icon", @"width", nil] callfunction:nil functionObject:nil setStringValueFunction:@selector(setIconWidth:) setStringValueObject:self];
@@ -141,6 +143,7 @@
     [iconDepth release];
     [udn release];
     [friendlyName release];
+    [manufacturer release];
     
 	[friendlyNameStack release];
 	[udnStack release];

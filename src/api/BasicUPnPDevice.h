@@ -52,6 +52,7 @@
 	NSURL *baseURL;
 	NSString *baseURLString;
 	NSString *friendlyName;
+    NSString *manufacturer;
 	NSString *udn;
 	NSString *usn;
 	NSString *urn;
@@ -79,6 +80,7 @@
 @property(readwrite, retain) NSURL *baseURL;
 @property(readwrite, retain) NSString *baseURLString;
 @property(readwrite, retain) NSString *friendlyName;
+@property(readwrite, retain) NSString *manufacturer;
 @property(readwrite, retain) NSString *udn;
 @property(readwrite, retain) NSString *usn;
 @property(readwrite, retain) NSString *urn;
