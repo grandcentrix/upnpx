@@ -214,6 +214,16 @@ int SSDP::Stop(){
 
 //Multicast M-Search
 int SSDP::Search(){
+    
+    // Quick and dirty hack for sending 3 M-Search Messages
+    static int counter = 1;
+    if (counter != 3) {
+        counter++;
+        Search();
+    } else {
+        counter = 1;
+    }
+    
 	u32 seconds = 3;
 	char target[]="ssdp:all";
 	const char *os=mOS.c_str();
