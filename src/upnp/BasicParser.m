@@ -69,7 +69,7 @@ static NSString *ElementStop = @"ElementStop";
 
 -(int)addAsset:(NSArray*)path callfunction:(SEL)function functionObject:(id)funcObj setStringValueFunction:(SEL)valueFunction setStringValueObject:(id)obj;{
 	BasicParserAsset* asset = [[BasicParserAsset alloc] initWithPath:path setStringValueFunction:valueFunction setStringValueObject:obj callFunction:function functionObject:funcObj];
-	[mAssets addObject:asset];
+	[mAssets addObject:[[asset retain] autorelease]];
 	[asset release];
 	return 0;
 }
